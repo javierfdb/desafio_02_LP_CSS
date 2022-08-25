@@ -1,0 +1,197 @@
+@mixin respond-to($width) {
+    @media only screen and (max-width: $width) {
+      @content;
+    }
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    position: relative; 
+}
+
+section {
+  margin: 30px 0px;
+}
+
+header {
+  .banner-interior {
+    position: relative;
+    height: 18.75rem;
+    background-color: #EAEAEA;
+    margin: 0px;
+    @include respond-to(991px) {
+      height: auto;
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+    }
+    .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      @include respond-to(991px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+        .texto {
+          height: 100%;
+          z-index: 2;
+          width: 43.5rem;
+          max-width: 100%;
+          color: #000;
+          @include respond-to(991px) {
+            text-align: center;
+          }
+          .wrap {
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            @include respond-to(991px) {
+              align-items: center;
+            }
+            h1 {
+              font-size: 3rem;
+              @include respond-to(991px) {
+                font-size: 1.8rem;
+              }
+            }
+            h4 {
+              font-size: 1.5rem;
+              @include respond-to(991px) {
+                text-align: center;
+                font-size: 1rem;
+              }
+            }
+          }
+    }
+        .bg-banner {
+          position: absolute;
+          max-width: 200px;
+          right: 5%;
+          top: 10%;
+          transform: rotate(10deg);
+          @include respond-to(991px) {
+            position: relative;
+            right: 0%;
+          }
+        }
+    }
+  }
+}
+
+main {
+  .container {
+    section.title {
+      h2 {
+        @include respond-to(991px) {
+          text-align: center;
+        }
+      }
+    }
+    .gangas {
+      .row {
+        margin-bottom: 2rem;
+        .box-texto {
+          padding: 1rem 2rem;
+          border-radius: 20px;
+          background-color: #6aa3b4;
+          color: #fff;
+          @include respond-to(556px) {
+            border-radius: 0px;
+          }
+          h2 {
+            color: #000;
+          }
+          h5 {
+            color: #000;
+            span {
+              font-weight: bold;
+              font-size: 32px;
+            }
+          }
+          p {
+            font-size: 18px;
+          }
+
+          a {
+            color: #fff;
+          }
+          
+          button {
+            border: none;
+            background-color: transparent; 
+            .fas {
+              font-size: 1.5rem;
+              transform: translateY(4px);
+            }
+          }
+        }
+
+        figure {
+          margin-bottom: 0px;
+          position: relative;
+          &:hover img {
+            filter: brightness(.7);
+          }
+          &:hover .fas {
+            transform: scale(1.2);
+            transition: transform 0.8s ease;
+          }
+          img {
+            border-radius: 20px;
+            @include respond-to(991px) {
+              margin-bottom: 0rem;
+            } 
+            @include respond-to(556px) {
+              border-radius: 0px;
+            } 
+          }
+          .fas {
+            position: absolute;
+            bottom: 5%;
+            right: 8%;
+            font-size: 2rem;
+            color: #fff;
+          }
+        }
+
+        .txt {
+          @include respond-to(991px) {
+            order: 1;
+          } 
+        }
+        
+      }
+      .row.r-01 {
+        margin-top: 3rem;
+      }
+      .row > * {
+        @include respond-to(556px) {
+          padding: 0px !important;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #EAEAEA;
+  color: #000;
+  padding: 1rem 0rem;
+  text-align: center;
+  margin-bottom: 0px;
+  font-weight: 500;
+}
