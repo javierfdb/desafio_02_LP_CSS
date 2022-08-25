@@ -2,6 +2,6 @@
 
 ## Revisa el proyecto acá: 
 
-[Pincha acá](https://javierfdb.github.io/desafio_02_LP_CSS/ target="_blank")
+%md <a href="https://javierfdb.github.io/desafio_02_LP_CSS/" target="_blank">Picha acá</a>
 
 Se realiza un Landing page para una venta de garage
